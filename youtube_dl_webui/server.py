@@ -3,6 +3,7 @@
 
 import json
 
+from flask_ngrok import run_with_ngrok
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -12,6 +13,8 @@ from copy import deepcopy
 MSG = None
 
 app = Flask(__name__)
+#run this flask app with an automatic ngrok endpoint
+run_with_ngrok(app)
 
 MSG_INVALID_REQUEST = {'status': 'error', 'errmsg': 'invalid request'}
 
