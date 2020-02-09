@@ -135,6 +135,6 @@ class Server(Process):
     def run(self):
         global MSG
         MSG = self.msg_cli
-        app.run(host=self.host, port=int(self.port), use_reloader=False)
-
+        #app.run(host=self.host, port=int(self.port), use_reloader=False)
+        app.run()
 
